@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Coranzoncito</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #040938;
+    }
+    .heart{
+        height: 300px;
+        width: 300px;
+        background-color: red;
+        position: relative;
+        transform: rotate(45deg);
+        box-shadow: -40px 40px 300px #ff0505;
+        animation: palpitar 0.5s linear infinite alternate;
+    }
+    .contenido{
+        position: fixed;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    h1{
+        position: relative;
+        font-family: 'Garamond';
+        font-size: 30px;
+        top: -100%;
+        color: white;
+        animation: palpita 0.5s linear infinite alternate;
+    }
+    h2{
+        position: relative;
+        top: -80%;
+        font-family: 'Garamond';
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        
+    }
+    @keyframes palpita{
+        0%{transform: rotate(0deg) scale(1.10);}
+        80%{transform: rotate(0deg) scale(1.0);}
+        100%{transform: rotate(0deg) scale(0.8);}
+    }
+    @keyframes palpitar{
+        0%{transform: rotate(45deg) scale(1.10);}
+        80%{transform: rotate(45deg) scale(1.0);}
+        100%{transform: rotate(45deg) scale(0.8);}
+    }
+    .heart::before{
+        content: "";
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        background: red;
+        right: 50%;
+        border-radius: 50%;
+        box-shadow: 40px 40px 300px #fa0000;
+    }
+    .heart::after{
+        content: "";
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        background: red;
+        top: -50%;
+        border-radius: 50%;
+        box-shadow: 40px 40px 300px #ff0000;
+    }
+</style>
+<body>
+    <div class="heart"></div>
+    <div class="contenido">
+        <h1>Te amo</h1>
+        <h2>
+            Ninguna rosa se compara a ti<br>
+            Ningun girasol deslumbra como tu<br>
+            Ningun lirio es tan elegante como tu<br>
+            Ningun tulipan es tan perfecto como tu<br>
+            Sabes por qué?<br>
+            Porque tu eres <br>
+            Tan risueña, tan soñadora <br>
+            Tan colorida, tan hermosa <br>
+            Y tan única.
+        </h2>
+    </div>
+</body>
+</html>
